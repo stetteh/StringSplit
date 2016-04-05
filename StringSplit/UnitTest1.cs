@@ -8,6 +8,13 @@ namespace StringSplit
     [TestClass]
     public class UnitTest1
     {
+        public string FirstName(string name)
+        {
+            var words = name.Split(' ').ToList();
+            return words.First();
+        }
+
+       
 
         [TestMethod]
         public void TestFirstName()

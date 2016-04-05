@@ -14,7 +14,13 @@ namespace StringSplit
             return words.First();
         }
 
-       
+        public string LastName(string name)
+        {
+            var words = name.Split(' ').ToList();
+            return words.Last();
+
+        }
+
 
         [TestMethod]
         public void TestFirstName()

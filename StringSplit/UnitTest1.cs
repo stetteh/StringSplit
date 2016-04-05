@@ -11,7 +11,7 @@ namespace StringSplit
         public string FirstName(string name)
         {
             var words = name.Split(' ').ToList();
-            return words.First();
+            return words.First(); 
         }
 
         public string LastName(string name)

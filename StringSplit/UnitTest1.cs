@@ -11,6 +11,17 @@ namespace StringSplit
         public string FirstName(string name)
         {
             var words = name.Split(' ').ToList();
+            if (words.Count > 2)
+            {
+                var result = "";
+                for (int i = 0; i < words.Count - 1; i++)
+                {
+                    result += words[i] + " ";
+                }
+
+                return result.Trim();
+            }
+
             return words.First(); 
         }
 
@@ -43,8 +54,6 @@ namespace StringSplit
             Assert.AreEqual("Moby", FirstName("Moby"));
             Assert.AreEqual("Moby", LastName("Moby"));
         }
-
-
 
         [TestMethod]
         public void TestThreeWordName()
